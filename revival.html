@@ -99,9 +99,9 @@
     }
     .schedule-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 24px;
-      max-width: 800px;
+      max-width: 960px;
       margin: 36px auto 0;
     }
     .schedule-card {
@@ -237,10 +237,100 @@
       color: var(--muted, #5a6b7b);
     }
 
+    @media (max-width: 900px) {
+      .schedule-grid { grid-template-columns: repeat(2, 1fr); max-width: 600px; }
+    }
     @media (max-width: 640px) {
       .schedule-grid { grid-template-columns: 1fr; max-width: 320px; }
       .revival-links-grid { gap: 20px; }
       .revival-link-card { min-width: 140px; padding: 24px 28px; }
+      .programme-badges { flex-direction: column; align-items: center; }
+    }
+
+    /* ---- New content styles ---- */
+    .revival-verse {
+      max-width: 760px; margin: 0 auto 18px;
+      font-style: italic; font-size: 0.98rem;
+      color: #c8ddee; line-height: 1.6;
+    }
+    .revival-verse strong, .revival-verse { color: #f5c518; }
+    .revival-invite {
+      font-size: 1.15rem; font-weight: 600;
+      color: #fff; letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+    .revival-theme {
+      margin-top: 22px;
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      color: #fff; line-height: 1.4;
+    }
+    .revival-theme em { font-style: normal; font-weight: 700; color: #f5c518; }
+    .theme-label {
+      display: inline-block;
+      background: #1565c0; color: #fff;
+      padding: 3px 12px; border-radius: 6px;
+      font-size: 0.95rem; font-weight: 700;
+      margin-right: 8px; font-style: normal;
+    }
+    .day-month {
+      font-size: 0.78rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 1px;
+      color: #1565c0; margin-bottom: 2px;
+    }
+    .schedule-card--features {
+      background: #fff8e8;
+      border-color: #f5c518;
+      justify-content: center;
+      display: flex; flex-direction: column;
+      gap: 14px; padding: 24px 18px;
+    }
+    .feature-item {
+      font-size: 0.92rem; font-weight: 600;
+      color: #0d2a6e; line-height: 1.4;
+    }
+    .programme-badges {
+      display: flex; flex-wrap: wrap;
+      justify-content: center; gap: 16px;
+      margin-top: 32px;
+    }
+    .prog-badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 24px; border-radius: 50px;
+      font-size: 1rem; font-weight: 700; color: #fff;
+      min-width: 180px; justify-content: center;
+    }
+    .prog-badge em { font-style: italic; font-weight: 600; }
+    .prog-badge--blue { background: linear-gradient(135deg, #1565c0, #0d47a1); }
+    .prog-badge--red  { background: linear-gradient(135deg, #c62828, #b71c1c); }
+    .prog-badge--green { background: linear-gradient(135deg, #2e7d32, #1b5e20); }
+    .prog-badge strong { color: #f5c518; font-size: 1.1rem; }
+    .invite-box {
+      margin-top: 36px;
+      display: flex; flex-wrap: wrap;
+      align-items: center; justify-content: center;
+      gap: 24px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 14px; padding: 22px 32px;
+      max-width: 600px; margin-left: auto; margin-right: auto;
+    }
+    .invite-by { font-size: 1rem; color: #d5e6f7; line-height: 1.5; text-align: center; }
+    .invite-by strong { color: #fff; font-size: 1.08rem; }
+    .invite-by em { font-style: italic; color: #9ccbf5; }
+    .invite-phone {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #1565c0; color: #fff;
+      padding: 12px 24px; border-radius: 50px;
+      font-size: 1.1rem; font-weight: 700;
+      text-decoration: none; letter-spacing: 0.5px;
+      transition: background 0.2s ease;
+    }
+    .invite-phone:hover { background: #0d47a1; }
+    .revival-section-tag {
+      margin-top: 28px;
+      font-size: 1rem; font-weight: 800;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: #f5c518; text-align: center;
     }
   </style>
 </head>
@@ -288,14 +378,15 @@
   <!-- Hero -->
   <section class="revival-hero">
     <div class="container">
-      <span class="church-tag">Seventh-day Adventist</span>
-      <h1 class="church-name"><span>Central Church Vizag</span></h1>
-      <p class="church-sub">Jagadamba, Dabagardens, Visakhapatnam</p>
+      <span class="church-tag">Seventh-day Adventist Central Church</span>
+      <h1 class="church-name"><span>Dabagardens, Visakhapatnam &ndash; 530020</span></h1>
+      <p class="revival-verse">&ldquo;Hebrews 9:28 &ndash; So Christ was once offered to bear the sins of many; and unto them that look for him shall he appear the second time without sin unto salvation.&rdquo;</p>
+      <p class="revival-invite">You are cordially invited to</p>
       <div class="revival-title">
         <span class="word-revival">REVIVAL</span>
         <span class="word-meetings">Meetings</span>
       </div>
-      <p class="revival-tagline">Come and Experience <span>God&rsquo;s Presence!</span></p>
+      <p class="revival-theme"><span class="theme-label">Theme:</span> <em>The Sanctuary and The Second Coming</em></p>
     </div>
   </section>
 
@@ -314,42 +405,50 @@
       <div class="section-head">
         <span class="eyebrow">Mark Your Calendar</span>
         <h2>Meeting Schedule</h2>
-        <p>Three powerful evenings of revival, prayer, and the Word of God.</p>
       </div>
       <div class="schedule-grid">
 
         <div class="schedule-card reveal delay-1">
+          <div class="day-month">November</div>
           <div class="day-num">26</div>
           <div class="day-name">Thursday</div>
-          <div class="day-time">
-            <span>6:30 PM</span><br>to 9:00 PM
-          </div>
+          <div class="day-time"><span>6:30 PM</span></div>
           <div class="day-extra">Followed by Dinner</div>
         </div>
 
         <div class="schedule-card reveal delay-2">
+          <div class="day-month">November</div>
           <div class="day-num">27</div>
           <div class="day-name">Friday</div>
-          <div class="day-time">
-            <span>6:30 PM</span><br>to 9:00 PM
-          </div>
+          <div class="day-time"><span>6:30 PM</span></div>
           <div class="day-extra">Followed by Dinner</div>
         </div>
 
         <div class="schedule-card reveal delay-3">
+          <div class="day-month">November</div>
           <div class="day-num">28</div>
           <div class="day-name">Saturday</div>
-          <div class="day-time">
-            <span>9:00 AM</span>
-          </div>
+          <div class="day-time"><span>9:00 AM</span></div>
           <div class="day-extra">Followed by Lunch</div>
         </div>
 
+        <div class="schedule-card schedule-card--features reveal delay-4">
+          <div class="feature-item">&#10084; Health Talk</div>
+          <div class="feature-item">&#128214; Bible Stories for Children, Quiz and Prizes</div>
+        </div>
+
+      </div>
+
+      <!-- Programme badges -->
+      <div class="programme-badges">
+        <div class="prog-badge prog-badge--blue">&#127925; PRAISE <em>And Worship</em></div>
+        <div class="prog-badge prog-badge--red">&#128591; PRAYER <em>of Healing</em></div>
+        <div class="prog-badge prog-badge--green">&#127868; <em>Followed by</em> <strong>Dinner</strong></div>
       </div>
     </div>
   </section>
 
-  <!-- Speaker -->
+  <!-- Speaker & Invite -->
   <section class="revival-speaker">
     <div class="container">
       <div class="speaker-box">
@@ -357,10 +456,15 @@
         <div class="speaker-divider"></div>
         <h2 class="speaker-name">Pr. Giddi Varaprasad</h2>
         <p class="speaker-role">
-          <b>Ministerial Department Director</b><br>
-          ECIU, Hyderabad
+          <b>Ministerial Secretary</b><br>
+          ECIU of SDA, Hyderabad
         </p>
       </div>
+      <div class="invite-box">
+        <p class="invite-by"><em>Invited by:</em> <strong>Pr. B. Syam Babu,</strong><br>Elders, Youth and Church Members</p>
+        <a href="tel:+919704494782" class="invite-phone">&#128222; 9704494782</a>
+      </div>
+      <p class="revival-section-tag">&#9644; VISAKHA METRO SECTION OF SDA &#9644;</p>
     </div>
   </section>
 
@@ -370,7 +474,7 @@
       <div class="section-head">
         <span class="eyebrow">Join Us</span>
         <h2>Watch Live &amp; Find Us</h2>
-        <p>Catch the revival live on YouTube or visit us in person at Jagadamba, Dabagardens, Visakhapatnam.</p>
+        <p>Catch the revival live on YouTube or visit us in person at Dabagardens, Visakhapatnam &ndash; 530020.</p>
       </div>
       <div class="revival-links-grid">
         <a class="revival-link-card yt" href="https://www.youtube.com/@SDAChurchVizag" target="_blank" rel="noopener">

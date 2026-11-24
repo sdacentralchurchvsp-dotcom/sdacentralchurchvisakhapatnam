@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google-site-verification" content="Zi2qiCEMWMY_5mDFHsBge2H1NVaKNrXpURIuOs55FkM" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revival Meetings | SDA Central Church, Visakhapatnam</title>
+  <meta name="description" content="Join us for Revival Meetings at SDA Central Church Vizag, Jagadamba, Dabagardens. Speaker: Pr. Giddi Varaprasad, Ministerial Department Director, ECIU Hyderabad." />
+  <link rel="canonical" href="https://sdacentralchurchvizag.in/revival.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SDA Central Church, Visakhapatnam" />
+  <meta property="og:title" content="Revival Meetings | SDA Central Church, Visakhapatnam" />
+  <meta property="og:description" content="Join us for Revival Meetings at SDA Central Church Vizag. Speaker: Pr. Giddi Varaprasad, ECIU Hyderabad." />
+  <meta property="og:url" content="https://sdacentralchurchvizag.in/revival.html" />
+  <meta property="og:image" content="https://sdacentralchurchvizag.in/assets/img/logo.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" type="image/jpeg" href="assets/img/logo.jpg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* ---- Revival hero banner ---- */
+    .revival-hero {
+      background: linear-gradient(160deg, #0a1a3a 0%, #0d2a6e 45%, #1565c0 100%);
+      color: #fff;
+      padding: 70px 20px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .revival-hero::before {
+      content: "";
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255,255,255,0.07), transparent 70%);
+      pointer-events: none;
+    }
+    .revival-hero .church-tag {
+      display: inline-block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #9ccbf5;
+      margin-bottom: 10px;
+    }
+    .revival-hero .church-name {
+      font-family: var(--serif, Georgia, serif);
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      margin: 0 0 4px;
+    }
+    .revival-hero .church-name span { color: #f5c518; }
+    .revival-hero .church-sub {
+      font-size: 0.95rem;
+      color: #9ccbf5;
+      margin-bottom: 36px;
+    }
+    .revival-title {
+      position: relative; z-index: 1;
+      margin-bottom: 10px;
+    }
+    .revival-title .word-revival {
+      display: block;
+      font-family: var(--serif, Georgia, serif);
+      font-size: clamp(4rem, 14vw, 9rem);
+      font-weight: 900;
+      color: #f5c518;
+      line-height: 0.9;
+      text-shadow: 0 4px 24px rgba(0,0,0,0.4);
+      letter-spacing: -2px;
+    }
+    .revival-title .word-meetings {
+      display: block;
+      font-family: var(--serif, Georgia, serif);
+      font-size: clamp(2.2rem, 8vw, 5.5rem);
+      font-weight: 700;
+      font-style: italic;
+      color: #fff;
+      line-height: 1;
+      text-shadow: 0 3px 16px rgba(0,0,0,0.35);
+    }
+    .revival-tagline {
+      margin-top: 28px;
+      font-family: var(--serif, Georgia, serif);
+      font-size: clamp(1.3rem, 4vw, 2rem);
+      font-style: italic;
+      color: #fff;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    .revival-tagline span { color: #f5c518; font-style: italic; }
+
+    /* ---- Schedule section ---- */
+    .revival-schedule {
+      background: #f4f7fc;
+      padding: 60px 20px;
+    }
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 800px;
+      margin: 36px auto 0;
+    }
+    .schedule-card {
+      background: #fff;
+      border: 2px solid #1565c0;
+      border-radius: 16px;
+      text-align: center;
+      padding: 28px 20px 24px;
+      box-shadow: 0 6px 24px rgba(13,47,82,0.12);
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
+    }
+    .schedule-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(13,47,82,0.18); }
+    .schedule-card .day-num {
+      font-family: var(--serif, Georgia, serif);
+      font-size: 3.2rem;
+      font-weight: 900;
+      color: #0d2a6e;
+      line-height: 1;
+    }
+    .schedule-card .day-name {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #1565c0;
+      margin-bottom: 14px;
+    }
+    .schedule-card .day-time {
+      background: #0d2a6e;
+      color: #fff;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+    .schedule-card .day-time span { color: #f5c518; }
+
+    /* ---- Speaker section ---- */
+    .revival-speaker {
+      background: linear-gradient(135deg, #0a1a3a, #0d2a6e);
+      color: #fff;
+      padding: 64px 20px;
+      text-align: center;
+    }
+    .speaker-box {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      max-width: 500px;
+    }
+    .speaker-label {
+      font-family: var(--serif, Georgia, serif);
+      font-size: 1.1rem;
+      font-style: italic;
+      color: #f5c518;
+      letter-spacing: 0.5px;
+    }
+    .speaker-name {
+      font-family: var(--serif, Georgia, serif);
+      font-size: clamp(1.6rem, 5vw, 2.4rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.2;
+      margin: 0;
+    }
+    .speaker-role {
+      font-size: 1rem;
+      color: #9ccbf5;
+      line-height: 1.5;
+    }
+    .speaker-role b { color: #fff; }
+    .speaker-divider {
+      width: 60px; height: 3px;
+      background: #f5c518;
+      border-radius: 3px;
+      margin: 4px auto;
+    }
+
+    /* ---- Links section ---- */
+    .revival-links {
+      background: #f4f7fc;
+      padding: 56px 20px;
+      text-align: center;
+    }
+    .revival-links-grid {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .revival-link-card {
+      background: #fff;
+      border: 1px solid #dbe4ee;
+      border-radius: 16px;
+      padding: 32px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 4px 18px rgba(13,47,82,0.10);
+      text-decoration: none;
+      color: var(--navy, #0b3a6f);
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
+      min-width: 180px;
+    }
+    .revival-link-card:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(13,47,82,0.18); }
+    .revival-link-card .link-icon {
+      width: 56px; height: 56px;
+      border-radius: 14px;
+      display: grid; place-items: center;
+      font-size: 1.8rem;
+    }
+    .revival-link-card.yt .link-icon { background: #ff0000; color: #fff; }
+    .revival-link-card.loc .link-icon { background: #1a73e8; color: #fff; }
+    .revival-link-card .link-label {
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.3px;
+    }
+    .revival-link-card .link-sub {
+      font-size: 0.82rem;
+      color: var(--muted, #5a6b7b);
+    }
+
+    @media (max-width: 640px) {
+      .schedule-grid { grid-template-columns: 1fr; max-width: 320px; }
+      .revival-links-grid { gap: 20px; }
+      .revival-link-card { min-width: 140px; padding: 24px 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-info">
+        <span><i class="ico">&#9993;</i> <a href="mailto:sdacentralchurchvsp@gmail.com">sdacentralchurchvsp@gmail.com</a></span>
+        <span><i class="ico">&#9742;</i> <a href="tel:+919704494782">+91 97044 94782</a></span>
+        <span><i class="ico">&#9200;</i> Sabbath Worship &middot; Saturday</span>
+      </div>
+      <div class="socials">
+        <a class="s-facebook" href="https://www.facebook.com/sdamainchurchvisakhapatnam/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a>
+        <a class="s-youtube" href="https://www.youtube.com/@SDAChurchVizag" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.09 0 12 0 12s0 3.91.5 5.8a3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14c.5-1.89.5-5.8.5-5.8s0-3.91-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg></a>
+        <a class="s-instagram" href="https://www.instagram.com/sdacentralchurch_visakhapatnam/?hl=en" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 3.68a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <span class="logo"><img src="assets/img/logo.jpg" alt="SDA Central Church logo" /></span>
+        <span class="brand-text">
+          <b>SDA Central Church</b>
+          <small>Visakhapatnam</small>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="ministries.html">Ministries</a>
+        <a href="sermons.html">Sermons</a>
+        <a href="events.html">Gallery</a>
+        <a href="resources.html">OneVoice27</a>
+        <a href="give.html">Give</a>
+        <a href="contact.html">Contact</a>
+        <a href="revival.html" class="nav-cta">Revival Meetings</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="revival-hero">
+    <div class="container">
+      <span class="church-tag">Seventh-day Adventist</span>
+      <h1 class="church-name"><span>Central Church Vizag</span></h1>
+      <p class="church-sub">Jagadamba, Dabagardens, Visakhapatnam</p>
+      <div class="revival-title">
+        <span class="word-revival">REVIVAL</span>
+        <span class="word-meetings">Meetings</span>
+      </div>
+      <p class="revival-tagline">Come and Experience <span>God&rsquo;s Presence!</span></p>
+    </div>
+  </section>
+
+  <!-- Schedule -->
+  <section class="revival-schedule">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Mark Your Calendar</span>
+        <h2>Meeting Schedule</h2>
+        <p>Three powerful evenings of revival, prayer, and the Word of God.</p>
+      </div>
+      <div class="schedule-grid">
+
+        <div class="schedule-card reveal delay-1">
+          <div class="day-num">26</div>
+          <div class="day-name">Thursday</div>
+          <div class="day-time">
+            <span>6:30 PM</span><br>to 9:00 PM
+          </div>
+        </div>
+
+        <div class="schedule-card reveal delay-2">
+          <div class="day-num">27</div>
+          <div class="day-name">Friday</div>
+          <div class="day-time">
+            <span>6:30 PM</span><br>to 9:00 PM
+          </div>
+        </div>
+
+        <div class="schedule-card reveal delay-3">
+          <div class="day-num">28</div>
+          <div class="day-name">Saturday</div>
+          <div class="day-time">
+            <span>9:00 AM</span><br>to 1:00 PM
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Speaker -->
+  <section class="revival-speaker">
+    <div class="container">
+      <div class="speaker-box">
+        <span class="speaker-label">&#9733; Speaker &#9733;</span>
+        <div class="speaker-divider"></div>
+        <h2 class="speaker-name">Pr. Giddi Varaprasad</h2>
+        <p class="speaker-role">
+          <b>Ministerial Department Director</b><br>
+          ECIU, Hyderabad
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- YouTube & Location links -->
+  <section class="revival-links">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Join Us</span>
+        <h2>Watch Live &amp; Find Us</h2>
+        <p>Catch the revival live on YouTube or visit us in person at Jagadamba, Dabagardens, Visakhapatnam.</p>
+      </div>
+      <div class="revival-links-grid">
+        <a class="revival-link-card yt" href="https://www.youtube.com/@SDAChurchVizag" target="_blank" rel="noopener">
+          <span class="link-icon">&#9654;</span>
+          <span class="link-label">YouTube</span>
+          <span class="link-sub">Watch Live Stream</span>
+        </a>
+        <a class="revival-link-card loc" href="https://maps.google.com/?q=Seventh-day+Adventist+Church+Vizag,+28-5-5+Yellamathota+Road,+Daba+Gardens,+Jagadamba+Junction,+Visakhapatnam" target="_blank" rel="noopener">
+          <span class="link-icon">&#128205;</span>
+          <span class="link-label">Location</span>
+          <span class="link-sub">Get Directions</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Verse -->
+  <section class="verse">
+    <blockquote>&ldquo;Will you not revive us again, that your people may rejoice in you?&rdquo;</blockquote>
+    <cite>&mdash; Psalm 85:6</cite>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="foot-brand">
+          <div class="foot-logo">
+            <span class="logo-circle"><img src="assets/img/logo.jpg" alt="SDA Central Church logo" /></span>
+            <b>SDA Central Church</b>
+          </div>
+          <p style="margin-top:12px;">Seventh-day Adventist Central Church, Visakhapatnam. A community of faith, hope, and love in Jesus Christ.</p>
+          <p style="margin-top:10px; font-size:0.88rem;">Door No. 28-5-5, Yellamathota Road, Daba Gardens, Jagadamba Junction, Visakhapatnam, AP 530020<br>&#9993; <a href="mailto:sdacentralchurchvsp@gmail.com">sdacentralchurchvsp@gmail.com</a><br>&#9742; <a href="tel:+919704494782">+91 97044 94782</a></p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="ministries.html">Ministries</a></li>
+            <li><a href="sermons.html">Sermons</a></li>
+            <li><a href="events.html">Gallery</a></li>
+            <li><a href="revival.html">Revival Meetings</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get Involved</h4>
+          <ul>
+            <li><a href="give.html">Give / Offerings</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Plan a Visit</a></li>
+            <li><a href="ministries.html">Volunteer</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Service Times</h4>
+          <ul>
+            <li>Friday Vespers &middot; Fri 7:15 PM</li>
+            <li>Sabbath School &middot; Sat 9:15 AM</li>
+            <li>Divine Worship &middot; Sat 11:00 AM</li>
+            <li>Prayer Meeting &middot; Wed 7:00 PM</li>
+            <li>Visakhapatnam, Andhra Pradesh</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div><a class="onevoice" href="resources.html"><b>OneVoice</b> 2027</a></div>
+        &copy; <span id="year">2026</span> SDA Central Church, Visakhapatnam &middot; <a href="https://sdacentralchurchvizag.in/">sdacentralchurchvizag.in</a>
+        <div class="dev-credit">Developed by <b>CH. JEEVAN &amp; DINAKAR</b> (SDA Church Members)</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

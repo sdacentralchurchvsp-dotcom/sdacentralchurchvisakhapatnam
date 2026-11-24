@@ -61,9 +61,14 @@
     .revival-title {
       position: relative; z-index: 1;
       margin-bottom: 10px;
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
     }
     .revival-title .word-revival {
-      display: block;
+      display: inline;
       font-family: var(--serif, Georgia, serif);
       font-size: clamp(1.6rem, 4vw, 2.6rem);
       font-weight: 900;
@@ -73,7 +78,7 @@
       letter-spacing: 1px;
     }
     .revival-title .word-meetings {
-      display: block;
+      display: inline;
       font-family: var(--serif, Georgia, serif);
       font-size: clamp(1.4rem, 3.5vw, 2.2rem);
       font-weight: 700;

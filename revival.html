@@ -20,12 +20,11 @@
   <link rel="icon" type="image/jpeg" href="assets/img/logo.jpg" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
-    /* ---- Poster — after hero on all devices ---- */
+    /* ---- Poster — mobile: image first, desktop: after hero ---- */
     .revival-poster-section {
       display: block;
       background: #0a1a3a;
-      padding: 40px 20px;
-      text-align: center;
+      line-height: 0;
     }
     .revival-poster-img {
       display: block;
@@ -33,14 +32,25 @@
       max-width: 600px;
       height: auto;
       margin: 0 auto;
-      border-radius: 18px;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    }
+    @media (min-width: 768px) {
+      .revival-poster-section {
+        order: 2;
+        padding: 48px 20px;
+        line-height: normal;
+      }
+      .revival-poster-img {
+        border-radius: 18px;
+        box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+      }
+      .revival-hero { order: 1; }
+      .revival-page-wrap {
+        display: flex;
+        flex-direction: column;
+      }
     }
     @media (max-width: 767px) {
-      .revival-poster-img {
-        border-radius: 12px;
-        max-width: 100%;
-      }
+      .revival-poster-img { border-radius: 0; }
     }
 
     /* ---- Revival hero banner ---- */
@@ -403,6 +413,14 @@
     </div>
   </header>
 
+  <div class="revival-page-wrap">
+  <!-- Poster — mobile: first, desktop: second via CSS order -->
+  <section class="revival-poster-section">
+    <img src="assets/img/Revival%20Meetings.jpeg"
+         alt="Revival Meetings Poster - SDA Central Church Vizag"
+         class="revival-poster-img" />
+  </section>
+
   <!-- Hero -->
   <section class="revival-hero">
     <div class="container">
@@ -417,13 +435,7 @@
       <p class="revival-theme"><span class="theme-label">Theme:</span> <em>The Sanctuary and The Second Coming</em></p>
     </div>
   </section>
-
-  <!-- Poster Image — after hero on all devices -->
-  <section class="revival-poster-section">
-    <img src="assets/img/Revival%20Meetings.jpeg"
-         alt="Revival Meetings Poster - SDA Central Church Vizag"
-         class="revival-poster-img" />
-  </section>
+  </div>
 
   <!-- Schedule -->
   <section class="revival-schedule">
